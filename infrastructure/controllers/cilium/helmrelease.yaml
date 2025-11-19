@@ -18,7 +18,7 @@ spec:
     spec:
       reconcileStrategy: Revision
       chart: cilium
-      version: "1.18.0"
+      version: "1.18.3"
       sourceRef:
         kind: HelmRepository
         name: cilium
@@ -93,6 +93,7 @@ spec:
     #           - httpV2:exemplars=true;labelsContext=source_ip,source_namespace,source_workload,destination_ip,destination_namespace,destination_workload,traffic_direction
     # prometheus:
     #   enabled: false
-    # operator:
+    operator:
+      replicas: 1
     #   prometheus:
     #     enabled: true
