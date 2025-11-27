@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: applications
 resources:
   - pg-cluster.yaml
+  - cluster-lb.yaml
