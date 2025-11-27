@@ -64,3 +64,23 @@ spec:
     name: flux-system
   path: ./infrastructure/components
   prune: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: infra-config
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: infra-components
+    - name: infra-operators
+    - name: infra-controllers
+    - name: namespaces
+  interval: 60m
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infrastructure/config
+  prune: true
