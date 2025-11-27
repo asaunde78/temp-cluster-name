@@ -68,7 +68,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: infra-config
+  name: infra-configs
   namespace: flux-system
 spec:
   dependsOn:
@@ -82,5 +82,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infrastructure/config
+  path: ./infrastructure/configs
   prune: true
