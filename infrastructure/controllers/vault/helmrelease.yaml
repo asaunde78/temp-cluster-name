@@ -17,8 +17,8 @@ spec:
   chart:
     spec:
       reconcileStrategy: Revision
-      chart: hashicorp/vault
-      version: "1.21.1"
+      chart: vault
+      version: "0.30.0"
       sourceRef:
         kind: HelmRepository
         name: vault
