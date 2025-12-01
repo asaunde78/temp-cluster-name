@@ -4,3 +4,4 @@ namespace: applications
 resources:
   - pg-cluster.yaml
   - cluster-lb.yaml
+  - longhorn-httproute.yaml
