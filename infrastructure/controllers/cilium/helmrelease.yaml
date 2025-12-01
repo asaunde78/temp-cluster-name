@@ -19,6 +19,7 @@ spec:
       reconcileStrategy: Revision
       chart: cilium
       version: "1.18.3"
+      api-versions: gateway.networking.k8s.io/v1/GatewayClass
       sourceRef:
         kind: HelmRepository
         name: cilium
@@ -58,6 +59,8 @@ spec:
         enabled: true
         enableAlpn: true
         enableAppProtocol: true
+        hostNetwork:
+          enabled: true
         secretsNamespace:
           sync: true
     l2announcements:
