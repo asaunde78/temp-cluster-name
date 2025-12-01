@@ -24,6 +24,7 @@ spec:
         name: vault
         namespace: kube-system
       interval: 12h
-      ui:
-        enabled: true
-        serviceType: LoadBalancer
+      values:
+        ui:
+          enabled: true
+          serviceType: LoadBalancer
