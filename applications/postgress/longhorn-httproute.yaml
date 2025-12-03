@@ -5,6 +5,10 @@ metadata:
   annotations:
     external-dns.alpha.kubernetes.io/hostname: longhorn.internal.zinkithink.com
 spec:
+  parentRefs:
+  - name: default-gateway 
+    sectionName: http 
+    kind: Gateway
   hostnames:
     - longhorn.internal.zinkithink.com
   rules:
