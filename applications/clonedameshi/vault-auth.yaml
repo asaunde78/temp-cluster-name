@@ -1,0 +1,31 @@
+apiVersion: secrets.hashicorp.com/v1beta1
+kind: VaultAuth
+metadata:
+  name: static-auth 
+  namespace: clonedameshi
+spec:
+  method: kubernetes 
+  mount: kubernetes
+  kubernetes:
+      role: clonedameshi 
+      serviceAccount: default 
+      audience:
+        - vault
+---
+apiVersion: secrets.hashicorp.com/v1beta1
+kind: VaultStaticSecret 
+metadata: 
+  namespace: clonedameshi 
+  name: vault-static-secret-clonedameshi 
+spec: 
+  vaultAuthRef: static-auth 
+  mount: kv-v2 
+  type: kv-v2 
+  path: clonedameshi/secret 
+  refreshAfter: 10s
+  # rolloutRestartTargets:
+  # - kind: Deployment
+  #  name: clonedameshi
+  destination: 
+    create: true
+    name: secret 
