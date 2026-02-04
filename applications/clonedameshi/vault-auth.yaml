@@ -40,28 +40,28 @@ spec:
   selector:
     matchLabels:
       app: clonedameshi 
-    template: 
-      metadata:
-        labels:
-          app: clonedameshi 
-      spec: 
-        containers:
-          - image: nginx
-            name: nginx 
-            env: 
-            - name: DISCORD_TOKEN 
-              valueFrom: 
-                secretRefKey:
-                  name: clonedameshi 
-                  key: DISCORD_TOKEN 
-            - name: TEST_GUILD_ID 
-              valueFrom: 
-                secretRefKey:
-                  name: clonedameshi 
-                  key: TEST_GUILD_ID 
-            - name: SUBMISSIONS_CHANNEL_NAME 
-              valueFrom: 
-                secretRefKey:
-                  name: clonedameshi 
-                  key: SUBMISSIONS_CHANNEL_NAME 
-            resources: {}
+  template: 
+    metadata:
+      labels:
+        app: clonedameshi 
+    spec: 
+      containers:
+        - image: nginx
+          name: nginx 
+          env: 
+          - name: DISCORD_TOKEN 
+            valueFrom: 
+              secretRefKey:
+                name: clonedameshi 
+                key: DISCORD_TOKEN 
+          - name: TEST_GUILD_ID 
+            valueFrom: 
+              secretRefKey:
+                name: clonedameshi 
+                key: TEST_GUILD_ID 
+          - name: SUBMISSIONS_CHANNEL_NAME 
+            valueFrom: 
+              secretRefKey:
+                name: clonedameshi 
+                key: SUBMISSIONS_CHANNEL_NAME 
+          resources: {}
