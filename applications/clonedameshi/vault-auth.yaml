@@ -51,17 +51,17 @@ spec:
           env: 
           - name: DISCORD_TOKEN 
             valueFrom: 
-              secretRefKey:
+              secretKeyRef:
                 name: clonedameshi 
                 key: DISCORD_TOKEN 
           - name: TEST_GUILD_ID 
             valueFrom: 
-              secretRefKey:
+              secretKeyRef:
                 name: clonedameshi 
                 key: TEST_GUILD_ID 
           - name: SUBMISSIONS_CHANNEL_NAME 
             valueFrom: 
-              secretRefKey:
+              secretKeyRef:
                 name: clonedameshi 
                 key: SUBMISSIONS_CHANNEL_NAME 
           resources: {}
