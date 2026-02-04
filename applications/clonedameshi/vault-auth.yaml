@@ -21,9 +21,9 @@ metadata:
   name: vault-static-secret-clonedameshi 
 spec: 
   vaultAuthRef: static-auth 
-  mount: kv-v2 
-  type: kv-v2 
-  path: clonedameshi/secret 
+  mount: secret 
+  type: secret 
+  path: clonedameshi/config 
   refreshAfter: 10s
   rolloutRestartTargets:
   - kind: Deployment
