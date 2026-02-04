@@ -17,7 +17,7 @@ spec:
   chart:
     spec:
       reconcileStrategy: Revision
-      chart: hashicorp/vault-secrets-operator
+      chart: vault-secrets-operator
       version: "1.2.0"
       sourceRef:
         kind: HelmRepository
