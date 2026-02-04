@@ -24,3 +24,8 @@ spec:
         name: vso
         namespace: vso-system
       interval: 12h
+  values:
+    defaultVaultConnection:
+      enabled: true
+      address: "https://kube-system.vault.svc.cluster.local:8200"
+      skipTLSVerify: false
