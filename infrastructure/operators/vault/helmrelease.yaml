@@ -27,5 +27,5 @@ spec:
   values:
     defaultVaultConnection:
       enabled: true
-      address: "https://vault-internal.kube-system.svc.cluster.local:8200"
-      skipTLSVerify: false
+      address: "http://vault-internal.kube-system.svc.cluster.local:8200"
+      skipTLSVerify: true
