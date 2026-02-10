@@ -1,0 +1,59 @@
+{
+  "apiVersion": "v1",
+  "kind": "Namespace",
+  "metadata": {
+    "creationTimestamp": "2026-02-10T00:41:45Z",
+    "deletionTimestamp": "2026-02-10T18:19:04Z",
+    "labels": {
+      "kubernetes.io/metadata.name": "applications",
+      "kustomize.toolkit.fluxcd.io/name": "namespaces",
+      "kustomize.toolkit.fluxcd.io/namespace": "flux-system"
+    },
+    "name": "applications",
+    "resourceVersion": "27468102",
+    "uid": "2873b679-dc09-4203-b759-f95901ac72ec"
+  },
+  "spec": {
+    "finalizers": []
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-02-10T18:19:09Z",
+        "message": "All resources successfully discovered",
+        "reason": "ResourcesDiscovered",
+        "status": "False",
+        "type": "NamespaceDeletionDiscoveryFailure"
+      },
+      {
+        "lastTransitionTime": "2026-02-10T18:19:09Z",
+        "message": "All legacy kube types successfully parsed",
+        "reason": "ParsedGroupVersions",
+        "status": "False",
+        "type": "NamespaceDeletionGroupVersionParsingFailure"
+      },
+      {
+        "lastTransitionTime": "2026-02-10T18:19:09Z",
+        "message": "Failed to delete all resource types, 1 remaining: unexpected items still remain in namespace: applications for gvr: /v1, Resource=pods",
+        "reason": "ContentDeletionFailed",
+        "status": "True",
+        "type": "NamespaceDeletionContentFailure"
+      },
+      {
+        "lastTransitionTime": "2026-02-10T18:19:09Z",
+        "message": "All content successfully removed",
+        "reason": "ContentRemoved",
+        "status": "False",
+        "type": "NamespaceContentRemaining"
+      },
+      {
+        "lastTransitionTime": "2026-02-10T18:19:09Z",
+        "message": "All content-preserving finalizers finished",
+        "reason": "ContentHasNoFinalizers",
+        "status": "False",
+        "type": "NamespaceFinalizersRemaining"
+      }
+    ],
+    "phase": "Terminating"
+  }
+}
