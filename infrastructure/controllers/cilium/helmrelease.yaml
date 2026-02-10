@@ -95,8 +95,6 @@ spec:
               - httpV2:exemplars=true;labelsContext=source_ip,source_namespace,source_workload,destination_ip,destination_namespace,destination_workload,traffic_direction
     # prometheus:
     #   enabled: false
-    ControlPlane:
-        enabled: true
     operator:
       replicas: 1
     #   prometheus:
