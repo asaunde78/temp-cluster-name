@@ -20,13 +20,6 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: vso-system
-  labels:
-    pod-security.kubernetes.io/enforce: privileged
----
-apiVersion: v1
-kind: Namespace
-metadata:
   name: clonedameshi
 ---
 apiVersion: v1
