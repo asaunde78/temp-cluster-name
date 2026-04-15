@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: external-secrets
-  namespace: operators
+  namespace: external-secrets
 spec:
   interval: 24h
   url: https://charts.external-secrets.io
@@ -11,7 +11,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: external-secrets
-  namespace: operators
+  namespace: external-secrets
 spec:
   interval: 60m
   chart:
@@ -22,6 +22,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: external-secrets
-        namespace: operators
+        namespace: external-secrets
       interval: 12h
 
