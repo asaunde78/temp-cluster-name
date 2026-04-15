@@ -10,3 +10,6 @@ spec:
     kind: ClusterSecretStore
   target:
     name: test-secret
+  dataFrom:
+  - extract:
+      key: eso/test-secret
