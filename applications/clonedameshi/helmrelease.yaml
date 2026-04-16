@@ -1,0 +1,27 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: clonedameshi
+spec:
+  interval: 5m0s
+  type: "oci"
+  url: oci://ghcr.io/asaunde78/charts
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: clonedameshi
+spec:
+  interval: 5m
+  releaseName: clonedameshi
+  chart:
+    spec:
+      reconcileStrategy: ChartVersion
+      chart: clonedameshi
+      version: "*"
+      sourceRef:
+        kind: HelmRepository
+        name: clonedameshi
+      valuesFiles:
+        - "values.yaml"
+      interval: 5m
