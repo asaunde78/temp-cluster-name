@@ -20,14 +20,4 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: clonedameshi
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: operators
----
-apiVersion: v1
-kind: Namespace
-metadata:
   name: external-secrets
