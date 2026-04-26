@@ -97,3 +97,5 @@ spec:
       enabled: false
     operator:
       replicas: 1
+      prometheus:
+        enabled: true
