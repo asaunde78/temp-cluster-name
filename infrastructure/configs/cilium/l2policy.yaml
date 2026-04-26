@@ -7,7 +7,7 @@ spec:
     interfaces :
     - "^eth[0-9]+"
     loadBalancerIPs: true
-    nodeSelector:
-        matchExpressions:
-          - key: node-role.kubernetes.io/control-plane
-            operator: DoesNotExist
+    # nodeSelector:
+    #     matchExpressions:
+    #       - key: node-role.kubernetes.io/control-plane
+    #         operator: DoesNotExist
