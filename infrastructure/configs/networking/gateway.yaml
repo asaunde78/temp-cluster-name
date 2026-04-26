@@ -11,4 +11,4 @@ spec:
     name: prod-web-gw
     allowedRoutes:
       namespaces:
-        from: Same
+        from: All
