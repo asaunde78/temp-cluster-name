@@ -93,9 +93,7 @@ spec:
               - port-distribution
               - icmp
               - httpV2:exemplars=true;labelsContext=source_ip,source_namespace,source_workload,destination_ip,destination_namespace,destination_workload,traffic_direction
-    # prometheus:
-    #   enabled: false
+    prometheus:
+      enabled: false
     operator:
       replicas: 1
-    #   prometheus:
-    #     enabled: true
