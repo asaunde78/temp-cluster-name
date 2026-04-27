@@ -9,4 +9,5 @@ spec:
   rules:
   - backendRefs:
     - name: vault-ui
+      namespace: kube-system
       port: 8200

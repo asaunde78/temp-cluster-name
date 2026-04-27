@@ -33,7 +33,6 @@ spec:
             ciliumAgent:
                 - CHOWN
                 - KILL
-                - NET_BIND_SERVICE
                 - NET_ADMIN
                 - NET_RAW
                 - IPC_LOCK
