@@ -25,6 +25,8 @@ spec:
         namespace: kube-system
       interval: 12h
   values:
+    nodePort:
+      bindProtection: false
     ipam:
         mode: kubernetes
     kubeProxyReplacement: true
