@@ -51,7 +51,7 @@ spec:
             enabled: false
         hostRoot: "/sys/fs/cgroup"
     devices: 
-        - eth0
+        - ens18
     k8sServiceHost: localhost
     k8sServicePort: 7445
     gatewayAPI:
