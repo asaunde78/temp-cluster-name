@@ -41,7 +41,7 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: unifi-api-key
-                key: key
+                key: UNIFI_API_KEY
           - name: LOG_LEVEL
             value: *logLevel
         livenessProbe:
