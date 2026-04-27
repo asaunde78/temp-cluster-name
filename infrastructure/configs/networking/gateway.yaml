@@ -7,7 +7,7 @@ spec:
   gatewayClassName: cilium
   listeners:
   - protocol: HTTP
-    port: 8080
+    port: 80
     name: prod-web-gw
     allowedRoutes:
       namespaces:
