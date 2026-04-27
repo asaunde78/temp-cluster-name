@@ -6,6 +6,7 @@ metadata:
 spec:
     interfaces :
     - "^eth[0-9]+"
+    externalIPs: true
     loadBalancerIPs: true
     # nodeSelector:
     #     matchExpressions:
