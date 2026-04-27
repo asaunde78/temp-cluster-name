@@ -21,3 +21,11 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: external-secrets
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kube-system
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
+#ensure kube system has the proper permissions
