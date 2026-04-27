@@ -9,6 +9,6 @@ spec:
     namespace: default
   rules:
   - backendRefs:
-    - name: vault-ui
+    - name: hubble-ui
       namespace: kube-system
-      port: 8200
+      port: 80
