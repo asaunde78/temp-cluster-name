@@ -18,7 +18,7 @@ spec:
     spec:
       reconcileStrategy: Revision
       chart: cilium
-      version: "1.18.0"
+      version: "1.18.4"
       sourceRef:
         kind: HelmRepository
         name: cilium
@@ -50,6 +50,8 @@ spec:
         autoMount:
             enabled: false
         hostRoot: "/sys/fs/cgroup"
+    devices: 
+        - eth0
     k8sServiceHost: localhost
     k8sServicePort: 7445
     gatewayAPI:
