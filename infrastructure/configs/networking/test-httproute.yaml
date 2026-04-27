@@ -12,3 +12,5 @@ spec:
     - name: vault-ui
       namespace: kube-system
       port: 8200
+  hostnames:
+    - vault.internal.zinkithink.com
