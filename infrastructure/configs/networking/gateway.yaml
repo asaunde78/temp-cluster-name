@@ -8,7 +8,7 @@ spec:
   infrastructure:
     annotations:
       external-dns.alpha.kubernetes.io/hostname: >-
-        vault.internal.zinkithink.com,
+        hubble.internal.zinkithink.com,
   listeners:
   - protocol: HTTP
     port: 80
