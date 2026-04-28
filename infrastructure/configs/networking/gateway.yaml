@@ -11,6 +11,7 @@ spec:
         hubble.internal.zinkithink.com,
   listeners:
   - protocol: HTTP
+    hostname: hubble.internal.zinkithink.com
     port: 80
     name: prod-web-gw
     allowedRoutes:
