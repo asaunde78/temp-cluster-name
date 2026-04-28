@@ -92,7 +92,7 @@ spec:
   parentRefs:
   - name: gateway
     sectionName: http
-    namespace: whoami-local
+    namespace: default
   hostnames:
   - whoami.internal.zinkithink.com
   rules:
