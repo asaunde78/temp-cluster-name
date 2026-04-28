@@ -58,7 +58,7 @@ spec:
     name: https
     tls:
       mode: Terminate
-      certifiateRefs:
+      certificateRefs:
       - kind: Secret 
         name: secret-tls-whoami-local
 ---
