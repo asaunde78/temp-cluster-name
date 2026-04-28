@@ -27,8 +27,6 @@ kind: Service
 metadata:
   name: whoami-service
   namespace: default
-  annotations:
-      external-dns.alpha.kubernetes.io/hostname: whoami.internal.zinkithink.com
 spec:
   selector:
     app: whoami
@@ -47,6 +45,9 @@ metadata:
     cert-manager.io/cluster-issuer: cloudflare-issuer
 spec:
   gatewayClassName: cilium
+  infrastructure:
+    annotations:
+      external-dns.alpha.kubernetes.io/hostname: whoami.internal.zinkithink.com
   listeners:
   - protocol: HTTP
     hostname: whoami.internal.zinkithink.com
