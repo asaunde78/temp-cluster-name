@@ -27,6 +27,8 @@ kind: Service
 metadata:
   name: whoami-service
   namespace: default
+  annotations:
+      external-dns.alpha.kubernetes.io/hostname: whoami.internal.zinkithink.com
 spec:
   selector:
     app: whoami
@@ -43,9 +45,6 @@ metadata:
   namespace: default
 spec:
   gatewayClassName: cilium
-  infrastructure:
-    annotations:
-      external-dns.alpha.kubernetes.io/hostname: whoami.internal.zinkithink.com
   listeners:
   - protocol: HTTP
     hostname: whoami.internal.zinkithink.com
@@ -72,17 +71,3 @@ spec:
     backendRefs:
     - name: whoami-service
       port: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: whoami-lb-service
-  namespace: default
-spec:
-  selector:
-    app: whoami
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: LoadBalancer
