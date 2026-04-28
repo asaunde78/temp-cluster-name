@@ -60,7 +60,7 @@ spec:
       mode: Terminate
       certificateRefs:
       - kind: Secret 
-        name: secret-tls-whoami-local
+        name: secret-tls-default
 ---
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
