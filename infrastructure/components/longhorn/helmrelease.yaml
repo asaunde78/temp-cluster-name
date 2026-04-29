@@ -25,3 +25,8 @@ spec:
         name: longhorn
         namespace: longhorn-system
       interval: 12h
+      csi:
+        attacherReplicaCount: 2
+        provisionerReplicaCount: 2
+        resizerReplicaCount: 2
+        snapshotterReplicaCount: 2
