@@ -5,7 +5,7 @@ metadata:
   namespace: kube-system
 spec:
   parentRefs:
-  - name: gateway
+  - name: default-gateway
     namespace: default
   hostnames:
     - vault.internal.zinkithink.com
@@ -25,7 +25,7 @@ metadata:
   namespace: kube-system
 spec:
   parentRefs:
-  - name: gateway
+  - name: default-gateway
     sectionName: http
     namespace: default
   hostnames:
