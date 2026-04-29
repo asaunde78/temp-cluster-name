@@ -12,7 +12,8 @@ spec:
       external-dns.alpha.kubernetes.io/hostname: >-
         hubble.internal.zinkithink.com,
         vault.internal.zinkithink.com,
-        whoami.internal.zinkithink.com
+        whoami.internal.zinkithink.com,
+        longhorn.internal.zinkithink.com,
   listeners:
   - protocol: HTTP
     port: 80

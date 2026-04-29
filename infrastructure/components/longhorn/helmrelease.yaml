@@ -26,6 +26,8 @@ spec:
         namespace: longhorn-system
       interval: 12h
   values:
+    persistence:
+      defaultClassReplicaCount: 1
     csi:
       attacherReplicaCount: 2
       provisionerReplicaCount: 2
