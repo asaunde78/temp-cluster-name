@@ -1,19 +1,46 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
 metadata:
-  name: prod-web
+  name: default-gateway
   namespace: default
+  annotations:
+    cert-manager.io/cluster-issuer: cloudflare-issuer
 spec:
   gatewayClassName: cilium
   infrastructure:
     annotations:
       external-dns.alpha.kubernetes.io/hostname: >-
         hubble.internal.zinkithink.com,
+        vault.internal.zinkithink.com,
+        whoami.internal.zinkithink.com
   listeners:
   - protocol: HTTP
-    hostname: hubble.internal.zinkithink.com
     port: 80
-    name: prod-web-gw
+    name: http
+    allowedRoutes:
+      namespaces:
+        from: All
+  - name: https-wildcard
+    protocol: HTTPS
+    port: 443
+    hostname: "*.internal.zinkithink.com"
+    tls:
+      mode: Terminate
+      certificateRefs:
+      - kind: Secret
+        name: wildcard-tls-zink-internal
+    allowedRoutes:
+      namespaces:
+        from: All
+  - name: https-bare
+    protocol: HTTPS
+    port: 443
+    hostname: "internal.zinkithink.com"
+    tls:
+      mode: Terminate
+      certificateRefs:
+      - kind: Secret
+        name: wildcard-tls-zink-internal
     allowedRoutes:
       namespaces:
         from: All
